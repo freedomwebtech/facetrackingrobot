@@ -8,7 +8,6 @@ mp_face = mp.solutions.face_detection.FaceDetection(model_selection=1,min_detect
 
 width=640
 height=480
-count=0
 
 
     
@@ -27,11 +26,6 @@ def turn1():
     client = mqtt.Client("raspberry pi 40")
     client.connect(mqttBroker)
     client.publish("test2",(bytes("turn1",'utf-8')))
-def back():
-    mqttBroker ="192.168.0.103"
-    client = mqtt.Client("raspberry pi 40")
-    client.connect(mqttBroker)
-    client.publish("test2",(bytes("back",'utf-8')))
 def forward():
     mqttBroker ="192.168.0.103"
     client = mqtt.Client("raspberry pi 40")
